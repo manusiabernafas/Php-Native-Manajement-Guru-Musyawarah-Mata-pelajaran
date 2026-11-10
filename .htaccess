@@ -1,0 +1,6 @@
+# Lindungi folder internal bila diakses langsung dari browser
+<FilesMatch "^(config\.php)$">
+    Require all denied
+</FilesMatch>
+RedirectMatch 403 ^/.*/(config|includes|database)/.*$
+Options -Indexes
